@@ -77,7 +77,8 @@ class Console(object):
 
     def __list(self):
         accounts = self._keyring_controler.accounts
-        for account in accounts:
+        sorted_accounts = sorted(accounts, key=lambda a:a.name)
+        for account in sorted_accounts:
             print(account.name)
 
     def __print(self, user_input):
