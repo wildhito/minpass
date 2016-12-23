@@ -18,7 +18,7 @@ class Security(object):
         Passphrase is PBKDF2 derivated into a 32-bit length key
         PBKDF2 salt comes from "MP" + reversed passphrase
         Data is encrypted / decrypted with AES CTR
-        AES counter is the same for everyone
+        AES and PBKDF2 can be customised with a config file
 
         Args:
             passphrase: the user passphrase in a string
