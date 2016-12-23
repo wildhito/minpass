@@ -22,7 +22,7 @@ class UI(object):
         if default_yes:
             choices = "[Y/n]"
 
-        while (not res in ["", 'Y', 'n']):
+        while (not res in ["", 'y', 'n']):
             res = input("%s %s " % (question, choices)).lower()
             if res == "y":
                 return True
