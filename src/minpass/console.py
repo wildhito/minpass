@@ -46,6 +46,8 @@ class Console(object):
             password = Security.generate_password()
         else:
             password = UI.create_secret("password")
+        if not password:
+            return
         if self._keyring_controler.register_account(account_name, password):
             self.__copy_password(account_name)
 
