@@ -42,8 +42,9 @@ class Console(object):
 
     def __add_account(self, account_name):
         if UI.confirm("Generate password?", default_yes=True):
+            password_len = UI.type_integer("Password size", 32, 8, 4096)
             print("Generating %s password..." % account_name)
-            password = Security.generate_password()
+            password = Security.generate_password(password_len)
         else:
             password = UI.create_secret("password")
         if not password:
