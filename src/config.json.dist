@@ -1,0 +1,8 @@
+{
+  "pbkdf2_hmac_algo": "sha256",
+  "pbkdf2_rounds": 100000,
+  "pbkdf2_dklen": 32,
+  "pbkdf2_salt_algo": "sha256",
+  "aes_counter_length": 128,
+  "aes_counter_initial_value": 89012345
+}
